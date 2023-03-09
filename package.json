@@ -1,0 +1,15 @@
+{
+  "name": "spa-book_library",
+  "version": "1.0.0",
+  "description": "library book app, spa-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "book",
+    "library"
+  ],
+  "author": " <pivnenko.albert@gmail.com>",
+  "license": "ISC"
+}
