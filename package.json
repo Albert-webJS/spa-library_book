@@ -11,5 +11,8 @@
     "library"
   ],
   "author": " <pivnenko.albert@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^3.19.0"
+  }
 }
