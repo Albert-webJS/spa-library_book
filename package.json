@@ -2,10 +2,11 @@
   "name": "spa-book_library",
   "version": "1.0.0",
   "description": "library book app, spa-app",
-  "main": "index.js",
+  "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "live-server",
-    "build": "rollup"
+    "build": "rollup -c --watch"
   },
   "keywords": [
     "book",
@@ -14,9 +15,11 @@
   "author": " <pivnenko.albert@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.1",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
     "eslint": "^8.35.0",
-    "rollup": "^3.19.0"
+    "rollup": "^3.19.0",
+    "rollup-plugin-import-css": "^3.2.1"
   }
 }
