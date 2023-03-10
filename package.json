@@ -7,7 +7,7 @@
   "scripts": {
     "start": "live-server",
     "build": "rollup -c --watch",
-    "stylelint": "stylelint \"**/*.css\" --fix"
+    "stylelint": "stylelint \"{src,static}/**/*.css\" --fix"
   },
   "keywords": [
     "book",

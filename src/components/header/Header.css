@@ -1,7 +1,41 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 34px 0 41px;
+}
+
 .logo {
   display: block;
   object-fit: cover;
   width: 100%;
   max-width: 45px;
   height: 42px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.menu-amount-selected {
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgb(18 18 18 / 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+
 }

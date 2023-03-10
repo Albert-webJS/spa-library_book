@@ -26,7 +26,7 @@ export class MainView extends View {
   }
 
   updateState(path: string) {
-    if (path === 'favorite') {
+    if (path === 'favorites') {
       console.log(`${path}`)
     }
   }

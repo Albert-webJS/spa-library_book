@@ -9,3 +9,27 @@
   margin: 0;
   box-sizing: inherit;
 }
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+#root {
+  margin-inline: auto;
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(18 18 18 / 100%);
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.link:visited {
+  color: rgb(5 5 5 / 100%);
+}

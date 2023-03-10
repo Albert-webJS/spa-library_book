@@ -1,12 +1,12 @@
 import { MainView } from "./views/main/main";
 
 export interface AppState {
-  favorite: string[];
+  favorites: string[];
 }
 
 class App {
   appState: AppState = {
-    favorite: [],
+    favorites: [],
   }
   private currentView: MainView;
   private routes = [{ path: "", view: MainView }];
