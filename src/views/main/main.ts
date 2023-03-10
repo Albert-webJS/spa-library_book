@@ -1,6 +1,7 @@
 import onChange from "on-change";
 import { AppState } from "../../app.js";
-import { View } from "../../common/view.js";
+import { View } from "../../common";
+import { Header } from '../../components'
 
 interface State {
   list: string[];
@@ -32,8 +33,13 @@ export class MainView extends View {
 
   render() {
     const container = document.createElement("div");
-    container.innerHTML = `Count books: ${this.appState.favorite.length}`;
-    this.app.innerHTML = "";
+    container.innerHTML = ``;
     this.app.append(container);
+    this.renderHeader();
+  }
+
+  renderHeader(): void {
+    const header = new Header(this.appState).render();
+    this.app.prepend(header);
   }
 }
