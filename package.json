@@ -24,7 +24,9 @@
     "rollup": "^3.19.0",
     "rollup-plugin-import-css": "^3.2.1",
     "stylelint": "^15.2.0",
-    "stylelint-config-standard": "^30.0.1"
+    "stylelint-config-idiomatic-order": "^9.0.0",
+    "stylelint-config-standard": "^30.0.1",
+    "stylelint-order": "^6.0.3"
   },
   "dependencies": {
     "on-change": "^4.0.2"
