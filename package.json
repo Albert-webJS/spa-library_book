@@ -16,6 +16,7 @@
   "author": " <pivnenko.albert@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-alias": "^4.0.3",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^11.0.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",

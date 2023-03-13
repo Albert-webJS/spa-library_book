@@ -1,4 +1,5 @@
 import css from "rollup-plugin-import-css";
+import alias from "@rollup/plugin-alias";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 
@@ -9,6 +10,11 @@ export default {
     format: "iife",
   },
   plugins: [
+    alias({
+      entries: [
+        { find: 'views', replacement: './src/views/*'}
+      ],
+    }),
     css(),
     nodeResolve(),
     typescript({

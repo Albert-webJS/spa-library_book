@@ -1,4 +1,4 @@
-import { MainView } from "./views/main/main";
+import { MainView } from "views";
 
 export interface AppState {
   favorites: string[];
