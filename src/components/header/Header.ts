@@ -1,5 +1,5 @@
-import { AppState } from "../../app";
-import { WrapperComponent } from "../../common";
+import { AppState } from "src/app";
+import { WrapperComponent } from "src/common";
 import './Header.css';
 
 export class Header extends WrapperComponent {
@@ -29,7 +29,6 @@ export class Header extends WrapperComponent {
     }
 
     render(): HTMLElement {
-        this.wrapper.innerHTML = '';
         this.wrapper.classList.add('header');
         this.wrapper.innerHTML = this.template();
         return this.wrapper

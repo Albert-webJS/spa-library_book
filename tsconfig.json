@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "target": "es2015",
     "paths": {
-      "src/*": ["./src/*"]
+      "src/*": ["src/*"]
     },
   },
 }

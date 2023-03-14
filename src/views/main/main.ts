@@ -1,9 +1,10 @@
 import onChange from "on-change";
-import { AppState } from "../../app.js";
-import { View } from "../../common";
-import { Header } from '../../components'
+import { AppState } from "src/app";
+import { View } from "src/common";
+import { Header } from 'src/components'
+import { Search } from "src/components/search/Search";
 
-interface State {
+export interface State {
   list: string[];
   loading: boolean;
   searchQuery: string | undefined;
@@ -32,9 +33,10 @@ export class MainView extends View {
   }
 
   render() {
-    const container = document.createElement("div");
-    container.innerHTML = ``;
-    this.app.append(container);
+    const main = document.createElement("div");
+    main.innerHTML = ``;
+    main.append(new Search(this.state).render())
+    this.app.append(main);
     this.renderHeader();
   }
 

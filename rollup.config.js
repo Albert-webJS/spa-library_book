@@ -15,7 +15,7 @@ export default {
     typescript(),
     nodeResolve(),
     alias({
-      src: "./src",
+      src: "./src/*",
     }),
     css(),
   ],
