@@ -9,6 +9,22 @@ export class Search extends WrapperComponent {
         this.state = state;
     }
 
+    private search(): void {
+        const value = document.querySelector("input").value;
+        if (value.length === 0) {
+            return;
+        }
+        this.state.searchQuery = value;
+    }
+
+    private listener(): void {
+        this.wrapper.querySelector("button").addEventListener('click', this.search.bind(this));
+        this.wrapper.querySelector("input").addEventListener('keydown', (event) => {
+            if (event.code === "Enter") {
+                this.search()
+            }
+        })
+    }
     private template(): string {
         return `
         <div class="search-container">
@@ -35,6 +51,7 @@ export class Search extends WrapperComponent {
     public render(): HTMLElement {
         this.wrapper.classList.add('search');
         this.wrapper.innerHTML = this.template();
+        this.listener();
         return this.wrapper;
     }
 }
