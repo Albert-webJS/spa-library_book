@@ -8,6 +8,6 @@ export interface State {
     loading: boolean;
     searchQuery: string | undefined;
     offset: number;
-    numFound: 0,
+    numFound: string,
   }
   

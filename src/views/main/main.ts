@@ -1,13 +1,13 @@
 import onChange from "on-change";
-import { View } from "src/common";
+import { View } from "src/common/index";
 import { Header, Search, CardList } from 'src/components/index'
-import { AppState, State } from "src/interfaces/index";
+import { AppState, ResponseData, State } from "src/interfaces/index";
 
 export class MainView extends View {
   public appState: AppState;
   state: State = {
     list: [],
-    numFound: 0,
+    numFound: "0",
     loading: false,
     searchQuery: undefined,
     offset: 0
@@ -19,7 +19,7 @@ export class MainView extends View {
     this.state = onChange(this.state, this.update.bind(this))
   }
 
-  async loadList(q, offset): Promise<any> {
+  async loadList(q: string, offset: number): Promise<ResponseData> {
     const response = await fetch(`https://openlibrary.org/search.json?q=${q}&offset=${offset}`);
     return response.json()
   }
@@ -45,7 +45,9 @@ export class MainView extends View {
 
   render() {
     const main = document.createElement("div");
-    main.append(new Search(this.state).render(), new CardList(this.appState, this.state).render())
+    main.append(
+      new Search(this.state).render(),
+      new CardList(this.appState, this.state).render())
     this.app.innerHTML = '';
     this.app.append(main);
     this.renderHeader();
