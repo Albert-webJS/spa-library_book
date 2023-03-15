@@ -1,8 +1,5 @@
-import { MainView } from "src/views";
-
-export interface AppState {
-  favorites: string[];
-}
+import { MainView } from "src/views/index";
+import { AppState } from "./interfaces/index";
 
 class App {
   appState: AppState = {

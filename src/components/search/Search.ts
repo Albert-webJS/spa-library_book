@@ -1,5 +1,5 @@
 import { WrapperComponent } from 'src/common/wrapper-component';
-import { State } from 'src/views/index';
+import { State } from 'src/interfaces/index';
 import './Search.css';
 
 export class Search extends WrapperComponent {

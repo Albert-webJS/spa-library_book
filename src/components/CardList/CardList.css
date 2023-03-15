@@ -2,6 +2,15 @@
   width: 100%;
   height: 200px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 30px;
+}
+
+/* .card-title {
+} */
+
+.card-loading {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  justify-self: center;
 }

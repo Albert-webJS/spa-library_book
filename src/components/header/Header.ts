@@ -1,5 +1,5 @@
-import { AppState } from "src/app";
-import { WrapperComponent } from "src/common";
+import { WrapperComponent } from "src/common/index";
+import { AppState } from "src/interfaces/index";
 import './Header.css';
 
 export class Header extends WrapperComponent {

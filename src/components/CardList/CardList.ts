@@ -1,6 +1,5 @@
-import { AppState } from 'src/app';
+import { AppState, State } from 'src/interfaces/index';
 import { WrapperComponent } from 'src/common/wrapper-component';
-import { State } from 'src/views/index';
 import './CardList.css';
 
 export class CardList extends WrapperComponent {
@@ -14,15 +13,15 @@ export class CardList extends WrapperComponent {
 
     private template(): string {
         return `
-            <div class="card-box">
-                <h1>Books found: ${this.parentState.list.length}</h1>
-            </div>
+                <h1 class="card-title">Books found: ${this.parentState.numFound}</h1>
         `;
     }
 
     public render(): HTMLElement {
         if (this.parentState.loading) {
-            this.wrapper.innerHTML = `<div>Loading...</div>`
+            this.wrapper.innerHTML = `
+                    <img class="card-loading" src="/static/icons/loading.gif" alt="loading status"/>
+            `
             return this.wrapper
         }
         this.wrapper.classList.add('card-list');
