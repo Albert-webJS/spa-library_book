@@ -4,7 +4,7 @@ export interface AppState {
   
 
 export interface State {
-    list: string[];
+    list: Record<string, any>[];
     loading: boolean;
     searchQuery: string | undefined;
     offset: number;
