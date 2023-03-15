@@ -5,7 +5,7 @@ import './Search.css';
 export class Search extends WrapperComponent {
     private state: State;
     constructor(state: State) {
-        super();
+        super('form');
         this.state = state;
     }
 

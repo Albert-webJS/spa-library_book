@@ -1,7 +1,7 @@
 export class WrapperComponent {
     public wrapper: HTMLElement;
-    constructor() {
-        this.wrapper = document.createElement('div');
+    constructor(domElement: string) {
+        this.wrapper = document.createElement(domElement);
     }
 
     public render(): void {

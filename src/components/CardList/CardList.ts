@@ -7,7 +7,7 @@ export class CardList extends WrapperComponent {
     appState: AppState;
     parentState: State;
     constructor(appState: AppState, parentState: State) {
-        super();
+        super('div');
         this.appState = appState;
         this.parentState = parentState;
     }

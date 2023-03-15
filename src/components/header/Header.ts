@@ -5,7 +5,7 @@ import './Header.css';
 export class Header extends WrapperComponent {
     public appState: AppState;
     constructor(appState: AppState) {
-        super();
+        super('header');
         this.appState = appState;
     }
 

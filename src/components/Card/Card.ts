@@ -6,7 +6,7 @@ export class Card extends WrapperComponent {
     appState: AppState;
     cardState: any;
     constructor(appState: AppState, cardState) {
-        super();
+        super('div');
         this.appState = appState;
         this.cardState = cardState;
     }
@@ -46,7 +46,6 @@ export class Card extends WrapperComponent {
             </div>
         `
     }
-
 
     render(): HTMLElement {
         this.wrapper.classList.add('card');
