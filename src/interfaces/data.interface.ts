@@ -1,9 +1,92 @@
 export interface ResponseData {
-    docs: Array<any>;
+    docs: Array<Book>;
     numFound: string;
     numFoundExact: boolean;
     num_found: number;
     offset: number;
     q: string;
     start: number;
+}
+
+export interface Book {
+    already_read_count: number;
+    author_alternative_name: Array<string>;
+    author_facet: Array<string>;
+    author_key: Array<string>;
+    author_name: Array<string>;
+    contributor: Array<string>;
+    cover_edition_key: string;
+    cover_i: number;
+    currently_reading_count: number;
+    ddc: Array<string>;
+    ddc_sort: string;
+    ebook_access: string;
+    ebook_count_i: number;
+    edition_count: number;
+    edition_key: Array<string>;
+    first_publish_year: number;
+    has_fulltext: boolean;
+    ia: Array<string>;
+    ia_box_id: Array<string>;
+    ia_collection: Array<string>;
+    ia_collection_s: string;
+    id_alibris_id: Array<string>;
+    id_amazon: Array<string>;
+    id_amazon_ca_asin: Array<string>;
+    id_amazon_de_asin: Array<string>;
+    id_amazon_it_asin: Array<string>;
+    id_british_library: Array<string>;
+    id_british_national_bibliography: Array<string>;
+    id_canadian_national_library_archive: Array<string>
+    id_depósito_legal: Array<string>;
+    id_goodreads: Array<string>;
+    id_google: Array<string>;
+    id_isfdb: Array<string>;
+    id_librarything: Array<string>;
+    id_libris: Array<string>;
+    id_overdrive: Array<string>;
+    id_wikidata: Array<string>;
+    isbn: Array<string>;
+    key: string;
+    language: Array<string>;
+    last_modified_i: number;
+    lcc: Array<string>;
+    lcc_sort: string;
+    lccn: Array<string>;
+    lending_edition_s: string;
+    lending_identifier_s: string;
+    number_of_pages_median: number;
+    oclc: Array<string>;
+    person: Array<string>;
+    person_facet: Array<string>;
+    person_key: Array<string>;
+    place: Array<string>;
+    place_facet: Array<string>;
+    place_key: Array<string>;
+    printdisabled_s: string;
+    public_scan_b: boolean;
+    publish_date: Array<string>;
+    publish_place: Array<string>;
+    publish_year: Array<number>;
+    publisher: Array<string>;
+    publisher_facet: Array<string>;
+    ratings_average: number;
+    ratings_count: number;
+    ratings_count_1: number;
+    ratings_count_2: number;
+    ratings_count_3: number;
+    ratings_count_5: number;
+    ratings_sortable: number
+    readinglog_count: number
+    ratings_count_4: number;
+    seed: Array<string>;
+    subject: Array<string>;
+    subject_facet: Array<string>;
+    subject_key: Array<string>;
+    title: string;
+    title_sort: string
+    title_suggest: string;
+    type: string;
+    want_to_read_count: number;
+    _version_: number
 }

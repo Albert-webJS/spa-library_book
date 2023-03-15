@@ -1,11 +1,11 @@
 import { WrapperComponent } from 'src/common/wrapper-component';
-import { AppState } from 'src/interfaces/index';
+import { AppState, Book } from 'src/interfaces/index';
 import './Card.css'
 
 export class Card extends WrapperComponent {
     appState: AppState;
-    cardState: any;
-    constructor(appState: AppState, cardState) {
+    cardState: Book;
+    constructor(appState: AppState, cardState: Book) {
         super('div');
         this.appState = appState;
         this.cardState = cardState;

@@ -1,4 +1,4 @@
-import { AppState, State } from 'src/interfaces/index';
+import { AppState, State, Book } from 'src/interfaces/index';
 import { WrapperComponent } from 'src/common/wrapper-component';
 import { Card } from '../Card/Card';
 import './CardList.css';
@@ -19,8 +19,8 @@ export class CardList extends WrapperComponent {
     }
 
     private renderCard(): void {
-        this.parentState.list.forEach(card => {
-            this.wrapper.append(new Card(this.appState, card).render())
+        this.parentState.list.forEach((book: Book) => {
+            this.wrapper.append(new Card(this.appState, book).render())
         })
     }
 

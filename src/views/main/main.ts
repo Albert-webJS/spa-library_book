@@ -37,6 +37,7 @@ export class MainView extends View {
     if (path === 'searchQuery') {
       this.state.loading = true;
       const data = await this.loadList(this.state.searchQuery, this.state.offset);
+      console.log("data: ", data)
       this.state.loading = false;
       this.state.numFound = data.numFound;
       this.state.list = data.docs;
