@@ -11,8 +11,14 @@ export class Card extends WrapperComponent {
         this.cardState = cardState;
     }
 
-    private template(): string {
-        const isExiste = this.appState.favorites.find((book: any) => book.key === this.cardState.key)
+    private addFavoritesBook(): void {
+        this.appState.favorites.push(this.cardState)
+    }
+    private deleteFavoritesBook(): void {
+        this.appState.favorites = this.appState.favorites.filter(book => book.key !== this.cardState.key)
+    }
+
+    private template(isExiste: Book): string {
         return `
             <div class="card-box-image">
                 <img 
@@ -32,7 +38,7 @@ export class Card extends WrapperComponent {
                 </span>
                 <div class="card-box-btn">
                     <button 
-                        class="button-add-favorites ${isExiste ? 'active' : ''}"
+                        class="button-add-favorites btn-active ${isExiste ? 'active' : ''}"
                     >
                     <svg class="favorite" width="12" height="17" viewBox="0 0 12 17" xmlns="http://www.w3.org/2000/svg">
                         <path 
@@ -47,9 +53,20 @@ export class Card extends WrapperComponent {
         `
     }
 
-    render(): HTMLElement {
+    public render(): HTMLElement {
         this.wrapper.classList.add('card');
-        this.wrapper.innerHTML = this.template();
+        const isExiste = this.appState.favorites.find(book => book.key === this.cardState.key);
+        this.wrapper.innerHTML = this.template(isExiste);
+        if (isExiste) {
+            this.wrapper
+                .querySelector('.btn-active')
+                .addEventListener('click', this.deleteFavoritesBook.bind(this));
+        } else {
+            this.wrapper
+                .querySelector('.btn-active')
+                .addEventListener('click', this.addFavoritesBook.bind(this));
+        }
+
         return this.wrapper;
 
     }

@@ -1,5 +1,7 @@
+import { Book } from "./data.interface";
+
 export interface AppState {
-    favorites: string[];
+    favorites: Book[];
   }
   
 
