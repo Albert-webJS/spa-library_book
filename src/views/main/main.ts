@@ -30,7 +30,7 @@ export class MainView extends View {
 
   public destroy(): void {
     onChange.unsubscribe(this.appState);
-    onChange.unsubscribe(this.state);
+    onChange.unsubscribe(this.state)
   }
 
   private updateState(path: string) {
@@ -59,6 +59,7 @@ export class MainView extends View {
 
   public render() {
     const main = document.createElement('section');
+    main.innerHTML = `<h1 class="card-title">Books found: ${this.state.numFound}</h1>`
     main.append(
       new Search(this.state).render(),
       new CardList(this.appState, this.state).render())

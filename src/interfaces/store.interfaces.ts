@@ -6,7 +6,7 @@ export interface AppState {
   
 
 export interface State {
-    list: Record<string, any>[];
+    list: Book[];
     loading: boolean;
     searchQuery: string | undefined;
     offset: number;

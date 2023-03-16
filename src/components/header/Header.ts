@@ -17,7 +17,7 @@ export class Header extends WrapperComponent {
                 <img src="/static/icons/search-icon.svg" alt="search icon" />
                 Search books
               </a>
-              <a class="menu-link link" href="favorites">
+              <a class="menu-link link" href="#favorites">
                 <img src="/static/icons/favorite-icon.svg" alt="favorite icon" />
                 Favorites
                 <div class="menu-amount-selected">

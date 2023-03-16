@@ -3,10 +3,12 @@ import { WrapperComponent } from 'src/common/wrapper-component';
 import { Card } from '../Card/Card';
 import './CardList.css';
 
+type StateComponent = State | Record<string, Book[]>
+
 export class CardList extends WrapperComponent {
     appState: AppState;
-    parentState: State;
-    constructor(appState: AppState, parentState: State) {
+    parentState: StateComponent;
+    constructor(appState: AppState, parentState: StateComponent) {
         super('div');
         this.appState = appState;
         this.parentState = parentState;
@@ -14,7 +16,6 @@ export class CardList extends WrapperComponent {
 
     private template(): string {
         return `
-                <h1 class="card-title">Books found: ${this.parentState.numFound}</h1>
                 <div class="card-grid"></div>
         `;
     }
