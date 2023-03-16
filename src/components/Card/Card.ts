@@ -28,7 +28,7 @@ export class Card extends WrapperComponent {
             </div>
             <div class="card-content">
                 <span class="card-tag">
-                    ${this.cardState.subject ? `${this.cardState.subject[0]} & ${this.cardState.subject[1]}` : "is not set"}
+                    ${this.cardState.subject ? `${this.cardState.subject[0]} & ${this.cardState.subject[1]}` : "no tag"}
                 </span>
                 <span class"card-name">
                     ${this.cardState.title}

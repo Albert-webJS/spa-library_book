@@ -20,11 +20,17 @@ export class MainView extends View {
     this.appState = appState
     this.appState = onChange(this.appState, this.updateState.bind(this))
     this.state = onChange(this.state, this.update.bind(this))
+    this.setTitle("book search")
   }
 
   private async loadList(q: string, offset: number): Promise<ResponseData> {
     const response = await fetch(`https://openlibrary.org/search.json?q=${q}&offset=${offset}`);
     return response.json()
+  }
+
+  public destroy(): void {
+    onChange.unsubscribe(this.appState);
+    onChange.unsubscribe(this.state);
   }
 
   private updateState(path: string) {

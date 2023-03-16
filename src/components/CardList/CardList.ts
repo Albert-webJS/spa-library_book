@@ -15,12 +15,13 @@ export class CardList extends WrapperComponent {
     private template(): string {
         return `
                 <h1 class="card-title">Books found: ${this.parentState.numFound}</h1>
+                <div class="card-grid"></div>
         `;
     }
 
-    private renderCard(): void {
+    private renderCard(cardGrid: Element): void {
         this.parentState.list.forEach((book: Book) => {
-            this.wrapper.append(new Card(this.appState, book).render())
+            cardGrid.append(new Card(this.appState, book).render())
         })
     }
 
@@ -33,7 +34,8 @@ export class CardList extends WrapperComponent {
         }
         this.wrapper.classList.add('card-list');
         this.wrapper.innerHTML = this.template();
-        this.renderCard();
+        const cardGrid = this.wrapper.querySelector('.card-grid');
+        this.renderCard(cardGrid)
         return this.wrapper
     }
 }
